@@ -1,0 +1,1 @@
+Windows環境でBunBackup実行後、Slackに通知するスクリプト
