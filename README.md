@@ -21,5 +21,19 @@ https://curl.haxx.se/download.html
 ----|---- 
 | BB_SLACK_WEBHOOKURL | https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/xxxxxxxxxxxxxxxxxxxxxxxx |
 
-## 3. タスクスケジューラの設定
+## 3. MicroSoft Software Shadow Copy Providerを有効にする
+標準では停止していることが多いため、自動起動するよう設定する。
+Shadow Copy Providerはファイルの作成日付や更新日付を保持してコピーする時に使用する。
+オプションは"/CREATIONTIMECOPY"となる。
+当該オプションを利用しないのなら、本設定はスキップできる。
+
+1. Windowsのサービスを起動する。
+1. 「MicroSoft Software Shadow Copy Provider」をダブルクリックする
+1. 「スタートアップの種類」を「自動」に変更し「OK」ボタンを押下
+1. 右クリック -> 開始を選択し起動する(※次回以降は勝手に立ち上がる）
+
+## 4. タスクスケジューラの設定
 Windowsのタスクスケジューラで本スクリプトを自動起動させる。
+### 設定のコツ
+- /CREATIONTIMECOPYはシステム管理者権限が必要であるため、「最上位の特権で実行する」オプションを有効にしておくこと
+- 「ユーザーがログオンしているときのみ実行する」を推奨
