@@ -1,5 +1,5 @@
 rem ### Run bunbackup
-BunBackup.exe /AUTO
+BunBackup.exe /CREATIONTIMECOPY /AUTO
 
 rem ### Send to Slack
 SET SLACK_CHANNEL=#notifications
