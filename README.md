@@ -1,6 +1,6 @@
 Windows環境でBunBackup実行後、Slackに通知するスクリプト
 
-# How To User
+# How To Use
 ## 1. Curlの入手
 Windowsは標準機能でCurlが用意されていないので、下記のサイトからダウンロードする。
 https://curl.haxx.se/download.html
