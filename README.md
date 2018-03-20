@@ -3,7 +3,7 @@ Windows環境でBunBackup実行後、Slackに通知するスクリプト
 # How To Use
 ## 1. Curlの入手
 Windowsは標準機能でCurlが用意されていないので、下記のサイトからダウンロードする。
-[download Curl](https://curl.haxx.se/download.html)
+[download Curl](https://curl.haxx.se/download.html)  
 「Win64 - Generic」を選択し、環境に合わせて64bit, 32bitどちらかを選択
 
 ## 2. 環境変数の設定
@@ -22,10 +22,10 @@ Windowsは標準機能でCurlが用意されていないので、下記のサイ
 | BB_SLACK_WEBHOOKURL | https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/xxxxxxxxxxxxxxxxxxxxxxxx |
 
 ## 3. MicroSoft Software Shadow Copy Providerを有効にする
-標準では停止していることが多いため、自動起動するよう設定する。
-Shadow Copy Providerはファイルの作成日付や更新日付を保持してコピーする時に使用する。
-オプションは"/CREATIONTIMECOPY"となる。
-当該オプションを利用しないのなら、本設定はスキップできる。
+標準では停止していることが多いため、自動起動するよう設定する。  
+Shadow Copy Providerはファイルの作成日付や更新日付を保持してコピーする時に使用する。  
+オプションは"/CREATIONTIMECOPY"となる。  
+当該オプションを利用しないのなら、本設定はスキップできる。  
 
 1. Windowsのサービスを起動する。
 1. 「MicroSoft Software Shadow Copy Provider」をダブルクリックする
