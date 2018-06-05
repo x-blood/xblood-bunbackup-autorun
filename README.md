@@ -5,8 +5,8 @@ Windows環境でBunBackupを実行後、Slackに通知するスクリプト
 
 # How To Use
 ## 1. Curlの入手
-Windowsは標準機能でCurlが用意されていないので、下記のサイトからダウンロードする。
-https://curl.haxx.se/download.html
+Windowsは標準機能でCurlが用意されていないので、下記のサイトからダウンロードする。  
+[download Curl](https://curl.haxx.se/download.html)  
 「Win64 - Generic」を選択し、環境に合わせて64bit, 32bitどちらかを選択
 
 ## 2. 環境変数の設定
@@ -27,10 +27,10 @@ https://curl.haxx.se/download.html
 | BB_SLACK_LOG_URL | ※ログファイルのURLを指定 |
 
 ## 3. MicroSoft Software Shadow Copy Providerを有効にする
-標準では停止していることが多いため、自動起動するよう設定する。
-Shadow Copy Providerはファイルの作成日付や更新日付を保持してコピーする時に使用する。
-オプションは"/CREATIONTIMECOPY"となる。
-当該オプションを利用しないのなら、本設定はスキップできる。
+標準では停止していることが多いため、自動起動するよう設定する。  
+Shadow Copy Providerはファイルの作成日付や更新日付を保持してコピーする時に使用する。  
+オプションは"/CREATIONTIMECOPY"となる。  
+当該オプションを利用しないのなら、本設定はスキップできる。  
 
 1. Windowsのサービスを起動する。
 1. 「MicroSoft Software Shadow Copy Provider」をダブルクリックする
@@ -40,5 +40,5 @@ Shadow Copy Providerはファイルの作成日付や更新日付を保持して
 ## 4. タスクスケジューラの設定
 Windowsのタスクスケジューラで本スクリプトを自動起動させる。
 ### 設定のコツ
-- /CREATIONTIMECOPYはシステム管理者権限が必要であるため、「最上位の特権で実行する」オプションを有効にしておくこと
+- "/CREATIONTIMECOPY"オプションはシステム管理者権限が必要であるため、「最上位の特権で実行する」オプションを有効にしておくこと
 - 「ユーザーがログオンしているときのみ実行する」を推奨
