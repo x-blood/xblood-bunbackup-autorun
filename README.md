@@ -1,4 +1,7 @@
-Windows環境でBunBackup実行後、Slackに通知するスクリプト
+Windows環境でBunBackupを実行後、Slackに通知するスクリプト
+
+# 結果メッセージの例
+![結果メッセージの例](/images/example-slack-result.PNG "結果メッセージの例")
 
 # How To Use
 ## 1. Curlの入手
@@ -14,12 +17,14 @@ https://curl.haxx.se/download.html
 ----|---- 
 | Path | C:\Users\xblood\curl-7.46.0-win64\bin |
 
-### Web Hook URLの設定
-ユーザー環境変数（※システム環境変数でもいい）にWeb Hook URLを設定する。
+### Slackで利用する環境変数の設定
+ユーザー環境変数（※システム環境変数でもいい）を設定する。
 
 | 項目名 | 値の例 |
 ----|---- 
 | BB_SLACK_WEBHOOKURL | https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/xxxxxxxxxxxxxxxxxxxxxxxx |
+| BB_SLACK_PREFIX | ```(*:office: Office*)``` |
+| BB_SLACK_LOG_URL | ※ログファイルのURLを指定 |
 
 ## 3. MicroSoft Software Shadow Copy Providerを有効にする
 標準では停止していることが多いため、自動起動するよう設定する。
